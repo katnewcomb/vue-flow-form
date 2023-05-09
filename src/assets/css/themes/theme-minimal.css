@@ -10,11 +10,11 @@
 
 :root {
   --vff-bg-color: #fff;
-  --vff-main-text-color: #181818;
+  --vff-main-text-color: #454A58;
   --vff-secondary-text-color: #999;
   --vff-tertiary-text-color: #f1f1f1;
-  --vff-main-accent-color: #0DBC79;
-  --vff-secondary-accent-color: #BBEBD5;
+  --vff-main-accent-color: #1F95CE;
+  --vff-secondary-accent-color: #1F95CE;
 }
 
 .vff,
@@ -48,7 +48,7 @@ header.vff-header {
 }
 
 header.vff-header svg.f-logo {
-  fill: rgba(0,0,0,0.9);
+  fill: rgba(4, 3, 3, 0.9);
 }
 
 .vff input[type="text"],
@@ -108,13 +108,13 @@ header.vff-header svg.f-logo {
 
 /* field-multiplechoice */
 .vff ul.f-radios li {
-  border: 1px solid var(--vff-secondary-text-color);
+  border: 1px solid var(--vff-main-accent-color);
 }
 
 .vff ul.f-radios li.f-selected,
 .vff ul.f-radios li:active {
-  border-color: var(--vff-main-text-color);
-  background-color: var(--vff-tertiary-text-color);
+  border-color: var(--vff-main-accent-color);
+  background-color: var(--vff-main-accent-color);
 }
 
 .vff ul.f-radios li.f-other.f-selected input {
@@ -191,13 +191,13 @@ header.vff-header svg.f-logo {
 /* buttons */
 .vff .o-btn-action {
   color: var(--vff-bg-color);
-  background-color: var(--vff-main-text-color);
+  background-color: var(--vff-main-accent-color);
 }
 
 .vff .o-btn-action:hover,
 .vff .o-btn-action:focus {
-  background-color: var(--vff-main-text-color);
-  opacity: .9;
+  background-color: var(--vff-main-accent-color);
+  opacity: .8;
 } 
 
 /* footer */
@@ -213,27 +213,27 @@ header.vff-header svg.f-logo {
 
 .vff-footer .f-prev svg,
 .vff-footer .f-next svg {
-  fill: var(--vff-main-text-color);
+  fill: var(--vff-bg-color);
 }
 
 .vff-footer .f-progress {
-  color: var(--vff-secondary-text-color);
+  color: var(--vff-bg-color);
 }
 
 .vff-footer .f-progress-bar {
-  background-color: var(--vff-secondary-text-color);
+  background-color: var(--vff-bg-color);
   filter: brightness(1.2);
 }
 
 .vff-footer .f-progress-bar-inner {
-  background-color: var(--vff-main-text-color);
+  background-color: var(--vff-bg-color);
 }
 
 .vff-footer .f-prev:hover,
 .vff-footer .f-next:hover,
 .vff-footer .f-prev:focus,
 .vff-footer .f-next:focus {
-  background-color: rgba(0,0,0,0.07);
+  background-color: rgba(255, 255, 255, 0.07);
 }
 
 /* alerts */
@@ -260,20 +260,20 @@ header.vff-header svg.f-logo {
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --vff-bg-color: #313640;
-    --vff-main-text-color: #fff;
-    --vff-secondary-text-color: #AEB6BF;
-    --vff-tertiary-text-color: #41464F;
-    --vff-main-accent-color: #41B883;
-    --vff-secondary-accent-color: #A0DBC1;
+    --vff-bg-color: #e1e2e6;
+    --vff-main-text-color: #999a9f;
+    --vff-secondary-text-color: #94969e;
+    --vff-tertiary-text-color: #1F95CE;
+    --vff-main-accent-color: #1F95CE;
+    --vff-secondary-accent-color: #1F95CE;
   }
 
   header.vff-header {
-    background-color: #313640;
+    background-color: var(--vff-bg-color);
   }
 
   header.vff-header svg.f-logo {
-    fill: var(--vff-main-accent-color);
+    fill: var(--vff-bg-color);
   }
 
   .vff textarea,
@@ -300,41 +300,45 @@ header.vff-header svg.f-logo {
 
   /* footer */
   .vff-footer .footer-inner-wrap {
-    background-color: rgba(49,54,64,0.75);
+    background-color: #1F95CE;
   }
-
+ /* Controls the Arrows */
   .vff-footer .f-prev svg,
   .vff-footer .f-next svg {
-    fill: var(--vff-main-accent-color);
+    fill: var(--vff-bg-color);
   }
 
   .vff-footer .f-prev.f-disabled svg,
   .vff-footer .f-next.f-disabled svg {
-    fill: var(--vff-main-text-color);
+    fill: var(--vff-bg-color);
   }
 
   .vff-footer .f-prev:hover,
   .vff-footer .f-next:hover {
-    background-color: rgba(0,0,0,0.2);
+    background-color: #1F95CE;
   }
 
+  /* progress */
   .vff-footer .f-progress-bar {
     background-color: var(--vff-secondary-text-color);
     filter: brightness(1);
   }
 
+  /* controls the number color*/
   .vff-footer .f-progress-bar-inner {
     background-color: var(--vff-main-accent-color);
   }
 
-  /* field-multiplechoice */
+  /* field-multiplechoice -- when SELECTED */
+    /* controls the number color*/
   .vff ul.f-radios li.f-selected{
-    color: var(--vff-main-accent-color);
+    color: var(--vff-bg-color);
   }
 
+  /*  Here is the 1-10 BUTTON COLOR for FONT */
   .vff ul.f-radios li {
     font-weight: 900;
-    color: var(--vff-secondary-text-color);
+    color: var(--vff-main-accent-color);
   }
 
   .vff .f-key {

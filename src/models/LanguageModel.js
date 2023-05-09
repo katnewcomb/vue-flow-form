@@ -10,8 +10,8 @@ export default class LanguageModel {
   constructor(options) {
     this.enterKey = 'Enter'
     this.shiftKey = 'Shift'
-    this.ok = 'OK'
-    this.continue = 'Continue'
+    this.ok = 'Enter'
+    this.Continue = 'Continue'
     this.skip = 'Skip'
     this.pressEnter = 'Press :enterKey'
     this.multipleChoiceHelpText = 'Choose as many as you like'

@@ -72,18 +72,10 @@
           v-on:click.prevent="onEnter"
           v-bind:aria-label="language.ariaOk"
         >
-          <span v-if="question.type === QuestionType.SectionBreak">{{ language.continue }}</span>
+          <span v-if="question.type === QuestionType.SectionBreak">{{ language.Continue }}</span>
           <span v-else-if="showSkip()">{{ language.skip }}</span>
           <span v-else>{{ language.ok }}</span>
         </button>
-
-        <a 
-          class="f-enter-desc"
-          href="#"
-          v-if="question.type !== QuestionType.LongText || !isMobile"
-          v-on:click.prevent="onEnter"
-          v-html="language.formatString(language.pressEnter)">
-        </a>
       </div>
 
       <div v-if="showInvalid()" class="f-invalid" role="alert" aria-live="assertive">{{ errorMessage }}</div>

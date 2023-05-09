@@ -21,6 +21,8 @@
             </svg>
           </div>
           <div class="f-key">{{ getToggleKey(option.value) }}</div>
+          <div v-if="option.value == 2" class="f-label-scale">extremely dissatisfied</div>
+          <div v-if="option.value == 8" class="f-label-scale">extremely satisfied</div>
         </div>
       </li> 
     </ul>
@@ -66,7 +68,7 @@
 
     beforeMount() {
       const 
-        size = this.question.max || 5,
+        size = this.question.max || 10,
         numOptions = Math.min(Math.max(size, 1), 10)
     
       if (!this.question.options.length) {
